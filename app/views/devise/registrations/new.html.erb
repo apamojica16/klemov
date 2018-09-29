@@ -4,12 +4,26 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :eeeemail %><br />
+    <%= f.label :Email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+      <div class="field">
+      <%= f.label :Nombre %><br/>
+      <%= f.text_field :name, autofocus: true%>
+        </div>
+        </div>
+        <div class="field">
+        <%= f.label :Cedula %><br/>
+        <%= f.text_field :cedula, autofocus: true%>
+          </div>
+
+       
+        <%= f.select :is_female, [ 'Hombre','Mujer' ], :prompt => 'Select One' %>
+        <div><%= f.label :Fecha_de_Nacieminto %><br />
+        <%= f.date_select :date_of_birth %></div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :Contraseña %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,7 +31,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :Confirmación_contraseña %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 

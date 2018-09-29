@@ -13,6 +13,21 @@
   <% end %>
 
   <div class="field">
+      <%= f.label :Nombre %><br/>
+      <%= f.text_field :name, autofocus: true%>
+        </div>
+        </div>
+        <div class="field">
+        <%= f.label :Cedula %><br/>
+        <%= f.text_field :cedula, autofocus: true%>
+          </div>
+
+       
+        <%= f.select :is_female, [ 'Hombre','Mujer' ], :prompt => 'Select One' %>
+        <div><%= f.label :Fecha_de_Nacieminto %><br />
+        <%= f.date_select :date_of_birth %></div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
