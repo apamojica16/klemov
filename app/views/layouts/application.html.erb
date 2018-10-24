@@ -9,7 +9,10 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body onload="myFunction()" style="margin:0; background-image: url(<%= asset_path 'Fondokle.png', heigh: '50%' %>); " >
+  <body  style="margin:0; background-image: url(<%= asset_path 'Fondokle.png', heigh: '50%' %>); " >
+
+  <!--
+  // <body funcion onload="myFunction()"
 <div id="loader">
 
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +187,9 @@ viewBox="0 0 220 72" style="enable-background:new 0 0 220 72;" xml:space="preser
    </g>
 </svg>
 </div>
-<div style="display:none;" id="myDiv" class="animate-bottom">
+(style="display:none;" id="myDiv"  class="animate-bottom") dentro del div
+-->
+<div >
   <header>
   <% if current_user %>
   <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete,class: 'login'  %>
@@ -195,10 +200,10 @@ viewBox="0 0 220 72" style="enable-background:new 0 0 220 72;" xml:space="preser
   <%= link_to image_tag("kle-mov.png",width: '200px'), informativos_Introduccion_path,class: 'logo' %>
   </div>
   <div class="login">
-  <%= link_to "SOBRE NOSOTROS", informativos_Acercade_path, class: 'login' %>
+  <%= link_to "SOBRE NOSOTROS", informativos_Desarrolladores_path, class: 'login' %>
   <%= link_to "CONTACTO", informativos_Contacto_path,class: 'login' %>
   <%= link_to "OBJETIVO", informativos_Objetivo_path,class: 'login' %>
-  <%= link_to "DESARROLLADORES", informativos_Desarrolladores_path, class: 'login'%>
+  <%= link_to "INICIO", informativos_Introduccion_path, class: 'login'%>
   
   
 
